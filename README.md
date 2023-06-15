@@ -51,29 +51,27 @@ For more information on building dapps with Secret Network. Check out our [front
 
 4. Once you have a local blockchain running, two player wallets created, and the dice contract deployed to your local blockchain, you are nearly ready to run the application locally:
 
-Because our local web server and local blockchain are running on different ports, you will need to use a proxy server to get around CORS issues. Your local blockchain exposes a proxy at `http://localhost:5173`, however, we recommend using this application prebuilt proxy as you will receive better logging information in case anything goes wrong. To run the proxy server, run the following command:
+   Because our local web server and local blockchain are running on different ports, you will need to use a proxy server to get around CORS issues. Your local blockchain exposes a proxy at `http://localhost:5173`, however, we recommend using this application prebuilt proxy as you will receive better logging information in case anything goes wrong. To run the proxy server, run the following command:
 
-```sh
-pnpm run proxy
-```
+   ```sh
+   pnpm run proxy
+   ```
 
 The prebuilt proxy server exposes the blockchain at `http://localhost:5050/rest`
 
 5. Now we can fill in our environment variables. Create a `.env` file based on our .env.template file in the root of the project and fill in the following variables:
 
-```sh
-
-```
-
-PLAYER_1_WALLET_MNEMONIC="YOUR PLAYER 1 WALLET MNEMONIC HERE"
-PLAYER_2_WALLET_MNEMONIC="YOUR PLAYER 2 WALLET MNEMONIC HERE"
-SECRET_NETWORK_URL="http://localhost:5050/rest"
+   ```sh
+   PLAYER_1_WALLET_MNEMONIC="YOUR PLAYER 1 WALLET MNEMONIC HERE"
+   PLAYER_2_WALLET_MNEMONIC="YOUR PLAYER 2 WALLET MNEMONIC HERE"
+   SECRET_NETWORK_URL="http://localhost:5050/rest"
+   ```
 
 6. Now we can run the application locally
 
-```sh
-pnpm run dev
-```
+   ```sh
+   pnpm run dev
+   ```
 
 7. Open your browser and navigate to `http://localhost:5173` to view the application
 
